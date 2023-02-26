@@ -23,5 +23,5 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag chernysh2909/docker-test:$(date +%s)
     - name: Docke push
-      run: docker push ${{secrets.DOCKER_USER}}/docker-test
+      run: docker push ${{secrets.DOCKER_USER}}/docker-test:$(date +%s)
       
